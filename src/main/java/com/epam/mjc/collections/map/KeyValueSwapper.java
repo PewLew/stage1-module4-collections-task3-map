@@ -9,13 +9,11 @@ public class KeyValueSwapper {
     public Map<String, Integer> swap(Map<Integer, String> sourceMap) {
         Map<String, Integer> map = new HashMap<>();
         List<Integer> ints = new ArrayList<>();
+        List<String> strings = new ArrayList<>();
         for(Map.Entry<Integer, String> item : sourceMap.entrySet()){
             ints.add(item.getKey());
+            strings.add(item.getValue());
         }
-
-        List<String> strings = new ArrayList<String>();
-        strings = sourceMap.values().stream().toList();
-        System.out.println();
         int a,b;
         for(int i = 0; i < strings.size(); i++){
             for(int j = 0; j < strings.size(); j++){
